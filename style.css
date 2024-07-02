@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('source/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('source/fonts/futur.ttf');
+}
+
+:root {
+    --cor0: #fff6e9;
+    --cor1: #fae3c4;
+    --cor2: #fbac85;
+    --cor3: #ef4826;
+    --cor4: #aa170d;
+
+    --font: 'Poppins', Arial, Helvetica, sans-serif;
+    --special: 'Futura', Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando a barra de rolagem completa */
+::-webkit-scrollbar {
+    width: 12px;  /* Largura da barra de rolagem vertical */
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilizando a trilha da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Cor de fundo da trilha */
+    border-radius: 10px;
+}
+
+/* Estilizando a peça da trilha */
+::-webkit-scrollbar-track-piece {
+    background: #f9f9f9;
+}
+
+/* Estilizando o thumb da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--cor3);  /* Cor do thumb */
+    border-radius: 10px; /* Borda arredondada do thumb */
+}
+
+/* Estilizando o thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cor4); /* Cor do thumb ao passar o mouse */
+}
+
+/* Estilizando o canto da barra de rolagem */
+::-webkit-scrollbar-corner {
+    background: #999; /* Cor do canto */
+}
+
+/* Estilizando o resizer da barra de rolagem */
+::-webkit-scrollbar-resizer {
+    background: #666; /* Cor do resizer */
+}
+
+body {
+    background-color: var(--cor0);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav_link {
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: var(--cor3);
+    border-bottom: 1px solid var(--cor3);
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 10px;
+    margin: auto;
+}
+
+#hero_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+}
+
+#hero_cover {
+    display: block;
+    border-radius: 15px;
+
+    width: 100%;
+    max-width: 230px;
+}
+
+#hero_texto {
+    text-align: center;
+}
+
+#hero_titulo {
+    color: var(--cor4);
+    font-size: 5.5rem;
+}
+
+#hero_description {
+    text-align: justify;
+    width: 100%;
+
+    padding: 20px;
+    max-width: 400px;
+}
+
+#especial {
+    text-decoration: none;
+    color: white;
+    font-family: var(--special);
+    background-color: var(--cor3);
+    border-radius: 20px;
+
+    padding: 10px 20px;
+}
+
+#especial:hover {
+    background-color: var(--cor4);
+}
+
+#destaques_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#destaque_id {
+    background-image: linear-gradient(to right, var(--cor3), var(--cor4));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.destaque_post {
+
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.destaque_capa {
+    display: block;
+    border-radius: 10px;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto 10px;
+}
+
+.destaque_titulo {
+    color: var(--cor4);
+}
+
+.destaque_description {
+
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.destaque_texto {
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--cor1);
+    padding: 60px;
+}
